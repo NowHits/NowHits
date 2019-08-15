@@ -1,0 +1,25 @@
+:root {
+  --highlight1: #3ec4a1;
+  --highlight2: #1c689e;
+  --foreground: #ffffff;
+  --gradient: linear-gradient(90deg, var(--highlight1) 0%, var(--highlight2) 100%);
+}
+
+body {
+  background: var(--gradient);
+  color: var(--foreground);
+  font-size: calc(0.0625em * 32);
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav ul a {
+  padding: 0 20px;
+  border-right: 4px solid var(--foreground);
+}

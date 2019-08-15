@@ -1,7 +1,7 @@
 //imports
 const express = require('express');
 const app = express();
-const port = 80;
+const port = 8000;
 const hbs = require('express-handlebars');
 const fs = require('fs');
 const colors = require('colors');
