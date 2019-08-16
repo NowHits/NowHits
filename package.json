@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "sass": "node-sass --watch main.sass main.css"
   },
   "author": "",
   "license": "ISC",
