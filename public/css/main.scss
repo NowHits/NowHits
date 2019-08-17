@@ -16,10 +16,12 @@ People Who Have Done A Bad:
 // Placeholders
 
 $main-font: 'Josefin Sans', sans-serif;
-$background-1: linear-gradient(to right bottom, #43cea2, #00b5b3, #0099bb, #007ab4, #185a9d);
-$background-2: linear-gradient(to right bottom, #845EC2, #D65DB1, #FF6F91, #FF9671, #F9F871);
-$background-3: linear-gradient(to right bottom, #FF5D5D, #DD5185, #A75799, #6C5A94, #2F4858);
-$background-4: linear-gradient(to right bottom, #0069E8, #00AFEE, #00CDCA, #00E997, #48FF5F);
+$background-1: linear-gradient(to right bottom, #0069E8, #00AFEE, #00CDCA, #00E997, #48FF5F); // Blue.
+$background-2: linear-gradient(to right bottom, #845EC2, #D65DB1, #FF6F91, #FF9671, #F9F871); // Magenta.
+$background-3: linear-gradient(to right bottom, #FF5D5D, #DD5185, #A75799, #6C5A94, #2F4858); // Orange.
+$background-4: linear-gradient(to right bottom, #43CEA2, #00B5B3, #0099BB, #007AB4, #185A9D); // Cyan.
+$background-5: linear-gradient(to right bottom, #6C5A94, #4C3949, #915665, #D27C6A, #F9F871); // Twilight.
+$background-lua: linear-gradient(to left bottom, #FF0000, #002983, #0C8300, #4D314D, #B3B82A); // Count From One Nerd
 
 body {
 	background-image: $background-1;
