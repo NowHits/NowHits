@@ -1,6 +1,11 @@
-/* If you change "main.css" I will come for you, use main.scss */
+/* If you change "main.css" I will come for you, use main.scss
+
+People Who Have Done A Bad:
+  Kai @ 8/17/19
+
+*/
 body {
-  background-image: linear-gradient(to right top, #eb930c, #ff6f3b, #ff3e71, #ff16b4, #f546fd);
+  background-image: linear-gradient(to right, #43cea2, #00b5b3, #0099bb, #007ab4, #185a9d);
   font-family: "Josefin Sans", sans-serif;
   color: #fff;
   margin: auto; }
