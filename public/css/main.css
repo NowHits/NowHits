@@ -1,11 +1,19 @@
-/* If you change "main.css" I will come for you, use main.scss
+/*
+
+If you change "main.css" I will come for you, use main.scss
+
+To install node-sass use these:
+	Get node sass with "npm install -g node-sass"
+	"node-sass --watch main.scss main.css" in "public/css"
+
+											----------
 
 People Who Have Done A Bad:
   Kai @ 8/17/19
 
 */
 body {
-  background-image: linear-gradient(to right, #43cea2, #00b5b3, #0099bb, #007ab4, #185a9d);
+  background-image: linear-gradient(to right bottom, #43cea2, #00b5b3, #0099bb, #007ab4, #185a9d);
   font-family: "Josefin Sans", sans-serif;
   color: #fff;
   margin: auto; }
@@ -17,10 +25,37 @@ body {
   text-align: center; }
 
 header {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
   color: #000;
-  padding: 3px;
-  border-radius: 0 20px 20px 20px; }
+  padding: 3px; }
+  header h2 {
+    border-radius: 0 0 20px 20px;
+    line-height: 0.5; }
+  header a {
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 0.5s;
+    color: #aaa; }
+  header a:link {
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 0.5s;
+    color: #aaa; }
+  header a:visited {
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 0.5s;
+    color: #aaa; }
+  header a:hover {
+    text-decoration: underline;
+    transition-property: color;
+    transition-duration: 0.5s;
+    color: #555; }
+  header a:active {
+    text-decoration: underline;
+    transition-property: color;
+    transition-duration: 0.5s;
+    color: #333; }
 
 ul {
   list-style-type: none;
@@ -40,5 +75,17 @@ footer {
   text-align: center; }
 
 .discord {
-  height: 300px;
+  height: 500px;
   margin: 3px; }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+::-webkit-scrollbar-thumb {
+  background: #888; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }

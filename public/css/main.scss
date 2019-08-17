@@ -1,16 +1,28 @@
-/* If you change "main.css" I will come for you, use main.scss
+/*
+
+If you change "main.css" I will come for you, use main.scss
+
+To install node-sass use these:
+	Get node sass with "npm install -g node-sass"
+	"node-sass --watch main.scss main.css" in "public/css"
+
+											----------
 
 People Who Have Done A Bad:
   Kai @ 8/17/19
 
 */
 
+// Placeholders
 
 $main-font: 'Josefin Sans', sans-serif;
-$background-blue: linear-gradient(to right, #43cea2, #00b5b3, #0099bb, #007ab4, #185a9d);
+$background-1: linear-gradient(to right bottom, #43cea2, #00b5b3, #0099bb, #007ab4, #185a9d);
+$background-2: linear-gradient(to right bottom, #845EC2, #D65DB1, #FF6F91, #FF9671, #F9F871);
+$background-3: linear-gradient(to right bottom, #FF5D5D, #DD5185, #A75799, #6C5A94, #2F4858);
+$background-4: linear-gradient(to right bottom, #0069E8, #00AFEE, #00CDCA, #00E997, #48FF5F);
 
 body {
-	background-image: $background-blue;
+	background-image: $background-1;
 	font-family: $main-font;
 	color: #fff;
 	margin: auto;
@@ -24,10 +36,48 @@ body {
 }
 
 header {
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.85);
 	color: #000;
 	padding: 3px;
-	border-radius: 0 20px 20px 20px;
+	h2 {
+		border-radius: 0 0 20px 20px;
+		line-height: 0.5;
+	}
+
+	a {
+		text-decoration: none;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #aaa;
+	}
+
+	a:link {
+	  text-decoration: none;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #aaa;
+	}
+
+	a:visited {
+		text-decoration: none;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #aaa;
+	}
+
+	a:hover {
+	  text-decoration: underline;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #555;
+	}
+
+	a:active {
+	  text-decoration: underline;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #333;
+	}
 }
 
 ul {
@@ -51,6 +101,29 @@ footer {
 }
 
 .discord {
-	height: 300px;
+	height: 500px;
 	margin: 3px;
+}
+
+
+// Scrollbar
+
+// width
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+// Track
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+// Handle
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+// Handle on hover
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
