@@ -1,2 +1,39 @@
+/* If you change "main.css" I will come for you, use main.scss */
 body {
-  background-color: #aaa; }
+  background-image: linear-gradient(to right top, #eb930c, #ff6f3b, #ff3e71, #ff16b4, #f546fd);
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  margin: auto; }
+
+.brand {
+  font-size: 48px;
+  margin-top: -40px;
+  margin-bottom: -40px;
+  text-align: center; }
+
+header {
+  background-color: #fff;
+  color: #000;
+  padding: 3px;
+  border-radius: 0 20px 20px 20px; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px; }
+  ul li {
+    display: inline;
+    padding: 8px; }
+
+footer {
+  font-size: 20px;
+  color: #000;
+  background-color: #fff;
+  margin: 0;
+  padding: 3px;
+  text-align: center; }
+
+.discord {
+  height: 300px;
+  margin: 3px; }

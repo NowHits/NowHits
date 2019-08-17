@@ -6,19 +6,11 @@ const hbs = require('express-handlebars');
 const fs = require('fs');
 const colors = require('colors');
 const mongo = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017'
+const url = 'mongodb://localhost:27017';
+const request = require('request');
 
 //public folder
 app.use(express.static('public'));
-
-mongo.connect(url, (err, client) => {
-  if (err) {
-    console.error(err)
-    return
-  }
-  const db = client.db('nowHits')
-  const collection = db.collection('djs')
-})
 
 app.set('view engine', 'hbs');
 
