@@ -1,6 +1,6 @@
 /*
 
-If you change "main.css" I will come for you, use main.scss
+If you change "main.css" I will come for you, use "main.scss"
 
 To install node-sass use these:
 	Get node sass with "npm install -g node-sass"
@@ -9,7 +9,7 @@ To install node-sass use these:
 											----------
 
 People Who Have Done A Bad:
-  Kai @ 8/17/19
+  Kai @ 8/17/19 ~ Breaking the whole damn website
 
 */
 body {
@@ -23,6 +23,24 @@ body {
   margin-top: -40px;
   margin-bottom: -40px;
   text-align: center; }
+
+.fas {
+  font-size: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+  cursor: pointer; }
+
+#player {
+  visibility: hidden; }
+
+#volume {
+  -webkit-appearance: none;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: opacity .2s; }
 
 header {
   background-color: rgba(255, 255, 255, 0.85);

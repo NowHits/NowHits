@@ -21,9 +21,15 @@ app.engine('hbs', hbs( {
   partialsDir: __dirname + "/views/partials/"
 }));
 
+/*request('http://radio.nowhits.uk:8000/stats?sid=1&pass=7Ld6dYkR&json=1', function (error, response, body) {
+  console.log('body:', body);
+});*/
+
 app.get('/', (req, res) => {
+
   res.render('index', {
-    title: "Home"
+    title: "Home",
+    currentListeners: request('http://radio.nowhits.uk:8000/stats?sid=1&pass=7Ld6dYkR&json=1').currentlisteners
   });
 });
 
