@@ -26,7 +26,7 @@ app.engine('hbs', hbs( {
 });*/
 
 app.get('/', (req, res) => {
-  if (req.param("show") != "true") {
+  if (req.param("password") != "luagay") {
     res.render('error', {
       title: "Error",
       code: "401",
