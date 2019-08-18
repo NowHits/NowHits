@@ -26,10 +26,27 @@ app.engine('hbs', hbs( {
 });*/
 
 app.get('/', (req, res) => {
-
+  if (req.param("show") != "true") {
+    res.render('error', {
+      title: "Error",
+      code: "401",
+      desc: "Unauthorised"
+    });
+    return;
+  }
   res.render('index', {
     title: "Home",
-    currentListeners: request('http://radio.nowhits.uk:8000/stats?sid=1&pass=7Ld6dYkR&json=1').currentlisteners
+    currentListeners: "Coming Soon" /*request('http://radio.nowhits.uk:8000/stats?sid=1&pass=7Ld6dYkR&json=1', function(error, response, body) {
+      return body;
+    }).currentlisteners*/
+  });
+});
+
+app.get('*', (req, res) => {
+  res.render('error', {
+    title: "Error",
+    code: "404",
+    desc: "Not Found"
   });
 });
 
