@@ -34,6 +34,7 @@ request(requestOptions, function metricFetch(error, response, body){
 console.log(metrics);
 
 app.get('/', (req, res) => {
+  console.log(metrics);
   params = req.query
   if (params.password != "luagay") {
     res.render('error', {
@@ -45,7 +46,8 @@ app.get('/', (req, res) => {
   }
   res.render('index', {
     title: "Home",
-    currentListeners: metrics.currentlisteners
+    currentListeners: metrics.currentlisteners,
+    songTitle: metrics.songtitle
   });
 });
 
