@@ -1,27 +1,25 @@
-<div>
+<div class="rootplayer">
   <div>
     <img alt='Artist art'>
-    <div>
-      On air: Ethan<br>
-      Up next: AJS Show<br>
-      Currently playing: Marquee Marquee Marquee Marquee Marquee<br>
-      Current Listeners: {{currentListeners}}
+    <div class="playerinfo">
+      <p>On air: Ethan</p>
+      <hr>
+      <p>Up next: AJS Show</p>
+      <hr>
+      <p>Currently playing: Marquee Marquee Marquee Marquee Marquee</p>
+      <hr>
+      <p>Current Listeners: {{currentListeners}}</p>
     </div>
     <audio controls="" id="player">
       <source src="http://radio.nowhits.uk:8000/radio.mp3?1565904355" type="audio/mpeg">
     <p>Your browser does not support the audio element.</p>
     </audio>
-    <!-- <button onclick="document.getElementById('player').play()">Play</button> -->
-    <i class="fas fa-play" onclick="play()"></i>
-    <!-- <button onclick="document.getElementById('player').pause()">Pause</button> -->
-    <i class="fas fa-pause" onclick="pause()"></i>
-    <!-- <button onclick="document.getElementById('player').volume += 0.1">Vol +</button>
-    <i class="fas fa-volume-up" onclick="document.getElementById('player').volume += 0.1"></i>
-    <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button>
-    <i class="fas fa-volume-down" onclick="document.getElementById('player').volume -= 0.1"></i> -->
+  </div>
+  <div class="playercontrols">
+    <i class="fas fa-play" onclick="play()" id="play"></i>
+    <i class="fas fa-pause" onclick="pause()" id="pause"></i>
     <input type="range" min="0" max="1" value="0.5" step="0.01" class="slider" id="volume">
     <script src="scripts/volume.js"></script>
     <script src="scripts/playpause.js"></script>
   </div>
-  <div>Actual buttons to be placed here.</div>
 </div>

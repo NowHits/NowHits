@@ -27,8 +27,36 @@ $background-lua: linear-gradient(to left bottom, #FF0000, #002983, #0C8300, #4D3
 body {
 	background-image: $background-1;
 	font-family: $main-font;
-	color: #fff;
+	color: #444;
 	margin: auto;
+	overflow-x: hidden;
+}
+
+.rootplayer {
+	margin: 0;
+	margin-left: 50%;
+	margin-right: 10%;
+	width: 40%;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 15px;
+	border-radius: 20px;
+	box-shadow: 0 0 10px #ddd;
+	.playerinfo {
+		width: 60%;
+		float: right;
+		border-width: 5px;
+		border-style: solid;
+		hr {
+			border-style: solid;
+			border-width: 3px;
+			padding: 0;
+		}
+	}
+}
+
+#pause {
+	display: none;
 }
 
 .brand {
@@ -40,8 +68,8 @@ body {
 
 .fas {
 	font-size: 40px;
-	margin-left: 15px;
-	margin-right: 15px;
+	margin-left: 50px;
+	margin-right: 50px;
 	cursor: pointer;
 }
 
