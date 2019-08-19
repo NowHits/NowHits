@@ -8,7 +8,7 @@ const colors = require('colors');
 const mongo = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017';
 const request = require('request');
-metrics = {}
+var metrics = {}
 //public folder
 app.use(express.static('public'));
 
@@ -20,6 +20,14 @@ app.engine('hbs', hbs( {
   layoutsDir: __dirname + "/views/layouts/",
   partialsDir: __dirname + "/views/partials/"
 }));
+
+var config = JSON.parse(fs.readFileSync('./public/config.json'))
+
+/*app.get('*', (req, res) => {
+  if (config.lockdown == true) {
+    res.render('emergency')
+  }
+});*/
 
 var requestOptions = {
   uri: 'http://radio.nowhits.uk:8000/stats?sid=1&pass=7Ld6dYkR&json=1',
@@ -34,7 +42,10 @@ request(requestOptions, function metricFetch(error, response, body){
 console.log(metrics);
 
 app.get('/', (req, res) => {
-  console.log(metrics);
+  request(requestOptions, function metricFetch(error, response, body){
+    metrics = body;
+    return metrics;
+  });
   params = req.query
   if (params.password != "luagay") {
     res.render('error', {

@@ -13,6 +13,15 @@ People Who Have Done A Bad:
 	Ethan @ 8/18/19 ~ Leaking the IP
 
 */
+.emergency {
+  float: right;
+  position: absolute;
+  margin-left: 15%;
+  color: #fff;
+  width: 100%;
+  font-size: 130%;
+  text-align: center; }
+
 body {
   background-image: linear-gradient(to right bottom, #0069E8, #00AFEE, #00CDCA, #00E997, #48FF5F);
   font-family: "Josefin Sans", sans-serif;
