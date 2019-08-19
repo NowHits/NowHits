@@ -21,12 +21,18 @@ app.engine('hbs', hbs( {
   partialsDir: __dirname + "/views/partials/"
 }));
 
-/*request('http://radio.nowhits.uk:8000/stats?sid=1&pass=7Ld6dYkR&json=1', function (error, response, body) {
-  console.log('body:', body);
-});*/
+var requestOptions = {
+    uri: 'http://radio.nowhits.uk:8000/stats?sid=1&pass=7Ld6dYkR&json=1',
+    json:true
+}
+var info = request(requestOptions, function(error, response, body){
+    var response = body
+    return response;
+});
 
 app.get('/', (req, res) => {
-  if (req.param("password") != "luagay") {
+  params = req.query
+  if (params.password != "luagay") {
     res.render('error', {
       title: "Error",
       code: "401",
@@ -36,9 +42,7 @@ app.get('/', (req, res) => {
   }
   res.render('index', {
     title: "Home",
-    currentListeners: "Coming Soon" /*request('http://radio.nowhits.uk:8000/stats?sid=1&pass=7Ld6dYkR&json=1', function(error, response, body) {
-      return body;
-    }).currentlisteners*/
+    currentListeners: "help"
   });
 });
 
