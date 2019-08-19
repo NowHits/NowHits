@@ -8,7 +8,7 @@ const colors = require('colors');
 const mongo = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017';
 const request = require('request');
-
+metrics = {}
 //public folder
 app.use(express.static('public'));
 
@@ -22,13 +22,16 @@ app.engine('hbs', hbs( {
 }));
 
 var requestOptions = {
-    uri: 'http://radio.nowhits.uk:8000/stats?sid=1&pass=7Ld6dYkR&json=1',
-    json:true
+  uri: 'http://radio.nowhits.uk:8000/stats?sid=1&pass=7Ld6dYkR&json=1',
+  json:true
 }
-var info = request(requestOptions, function(error, response, body){
-    var response = body
-    return response;
+
+request(requestOptions, function metricFetch(error, response, body){
+  metrics = body;
+  return metrics;
 });
+
+console.log(metrics);
 
 app.get('/', (req, res) => {
   params = req.query
@@ -42,7 +45,7 @@ app.get('/', (req, res) => {
   }
   res.render('index', {
     title: "Home",
-    currentListeners: "help"
+    currentListeners: metrics.currentlisteners
   });
 });
 
