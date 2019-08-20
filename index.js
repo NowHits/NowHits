@@ -40,8 +40,6 @@ request(requestOptions, function metricFetch(error, response, body){
   return metrics;
 });
 
-console.log(metrics);
-
 app.get('/', (req, res) => {
   request(requestOptions, function metricFetch(error, response, body){
     metrics = body;
@@ -56,12 +54,20 @@ app.get('/', (req, res) => {
     });
     return;
   }
+
+  if (metrics.live.is_live == false) {
+    dj = "No one!";
+  } else {
+    dj = metrics.live.streamer_name;
+  }
+
   res.render('index', {
     title: "Home",
     currentListeners: metrics.listeners.current,
     songTitle: metrics.now_playing.song.text,
     songart: metrics.now_playing.song.art,
-    latestAnnouncement: announcement.latest
+    latestAnnouncement: announcement.latest,
+    dj: dj
   });
 });
 
