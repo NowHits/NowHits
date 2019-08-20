@@ -23,7 +23,7 @@ People Who Have Done A Bad:
   text-align: center; }
 
 body {
-  background-image: linear-gradient(to right bottom, #0069E8, #00AFEE, #00CDCA, #00E997, #48FF5F);
+  background-image: linear-gradient(to right, #43CEA2, #00B5B3, #0099BB, #007AB4, #185A9D);
   font-family: "Josefin Sans", sans-serif;
   color: #444;
   margin: auto;
@@ -31,7 +31,7 @@ body {
 
 .rootplayer {
   margin: 0;
-  margin-left: 61%;
+  margin-left: 67%;
   margin-right: 10%;
   width: 30%;
   position: absolute;
@@ -48,6 +48,15 @@ body {
       border-style: solid;
       border-width: 3px;
       padding: 0; }
+
+.advert {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 10px #ddd; }
+
+.brand {
+  float: left; }
 
 .advert {
   width: 30%;
@@ -87,10 +96,10 @@ body {
 header {
   background-color: rgba(255, 255, 255, 0.85);
   color: #000;
-  padding: 3px; }
+  padding-bottom: 100px;
+  vertical-align: middle; }
   header h2 {
-    border-radius: 0 0 20px 20px;
-    line-height: 0.5; }
+    vertical-align: middle; }
   header a {
     text-decoration: none;
     transition-property: color;
@@ -116,6 +125,12 @@ header {
     transition-property: color;
     transition-duration: 0.5s;
     color: #333; }
+  header ul {
+    float: right;
+    font-size: 200%;
+    right: 10%;
+    position: absolute;
+    line-height: 300%; }
 
 ul {
   list-style-type: none;
@@ -124,7 +139,7 @@ ul {
   font-size: 20px; }
   ul li {
     display: inline;
-    padding: 8px; }
+    padding: 50px; }
 
 footer {
   font-size: 20px;

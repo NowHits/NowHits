@@ -17,10 +17,10 @@ People Who Have Done A Bad:
 // Placeholders
 
 $main-font: 'Josefin Sans', sans-serif;
-$background-1: linear-gradient(to right bottom, #0069E8, #00AFEE, #00CDCA, #00E997, #48FF5F); // Blue.
+$background-1: linear-gradient(to right, #43CEA2, #00B5B3, #0099BB, #007AB4, #185A9D); // Cyan.
 $background-2: linear-gradient(to right bottom, #845EC2, #D65DB1, #FF6F91, #FF9671, #F9F871); // Magenta.
 $background-3: linear-gradient(to right bottom, #FF5D5D, #DD5185, #A75799, #6C5A94, #2F4858); // Orange.
-$background-4: linear-gradient(to right bottom, #43CEA2, #00B5B3, #0099BB, #007AB4, #185A9D); // Cyan.
+$background-4: linear-gradient(to right bottom, #0069E8, #00AFEE, #00CDCA, #00E997, #48FF5F); // Blue.
 $background-5: linear-gradient(to right bottom, #6C5A94, #4C3949, #915665, #D27C6A, #F9F871); // Twilight.
 $background-lua: linear-gradient(to left bottom, #FF0000, #002983, #0C8300, #4D314D, #B3B82A); // Count From One Nerd
 
@@ -44,7 +44,7 @@ body {
 
 .rootplayer {
 	margin: 0;
-	margin-left: 61%;
+	margin-left: 67%;
 	margin-right: 10%;
 	width: 30%;
 	position: absolute;
@@ -63,6 +63,17 @@ body {
 			padding: 0;
 		}
 	}
+}
+
+.advert {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 20px;
+	box-shadow: 0 0 10px #ddd;
+}
+
+.brand {
+	float: left;
 }
 
 .advert {
@@ -109,10 +120,10 @@ body {
 header {
 	background-color: rgba(255, 255, 255, 0.85);
 	color: #000;
-	padding: 3px;
+	padding-bottom: 100px;
+	vertical-align: middle;
 	h2 {
-		border-radius: 0 0 20px 20px;
-		line-height: 0.5;
+		vertical-align: middle;
 	}
 
 	a {
@@ -149,6 +160,13 @@ header {
 		transition-duration: 0.5s;
 		color: #333;
 	}
+	ul {
+		float: right;
+		font-size: 200%;
+		right: 10%;
+		position: absolute;
+		line-height: 300%;
+	}
 }
 
 ul {
@@ -158,7 +176,7 @@ ul {
 	font-size: 20px;
 	li {
 		display: inline;
-		padding: 8px;
+		padding: 50px;
 	}
 }
 

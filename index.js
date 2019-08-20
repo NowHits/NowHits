@@ -22,6 +22,7 @@ app.engine('hbs', hbs( {
 }));
 
 var config = JSON.parse(fs.readFileSync('./public/config.json'))
+var announcement = JSON.parse(fs.readFileSync('./public/announcement.json'))
 
 /*app.get('*', (req, res) => {
   if (config.lockdown == true) {
@@ -30,7 +31,7 @@ var config = JSON.parse(fs.readFileSync('./public/config.json'))
 });*/
 
 var requestOptions = {
-  uri: 'http://radio.nowhits.uk:8000/stats?sid=1&pass=7Ld6dYkR&json=1',
+  uri: 'http://radio.nowhits.uk/api/nowplaying/1',
   json:true
 }
 
@@ -57,8 +58,10 @@ app.get('/', (req, res) => {
   }
   res.render('index', {
     title: "Home",
-    currentListeners: metrics.currentlisteners,
-    songTitle: metrics.songtitle
+    currentListeners: metrics.listeners.current,
+    songTitle: metrics.now_playing.song.text,
+    songart: metrics.now_playing.song.art,
+    latestAnnouncement: announcement.latest
   });
 });
 
