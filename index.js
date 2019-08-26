@@ -55,7 +55,7 @@ app.get('/', (req, res) => {
     return;
   }
 
-  if (metrics.live.is_live == false) {
+  if (metrics.live.is_live == "false") {
     dj = "No one!";
   } else {
     dj = metrics.live.streamer_name;

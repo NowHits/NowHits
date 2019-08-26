@@ -70,13 +70,6 @@ body {
 	background-color: rgba(255, 255, 255, 0.8);
 	border-radius: 20px;
 	box-shadow: 0 0 10px #ddd;
-}
-
-.brand {
-	float: left;
-}
-
-.advert {
 	width: 30%;
 	margin: 0;
 	margin-left: 31%;
@@ -94,6 +87,7 @@ body {
 	margin-top: -40px;
 	margin-bottom: -40px;
 	text-align: center;
+	float: left;
 }
 
 .fas {
@@ -163,9 +157,9 @@ header {
 	ul {
 		float: right;
 		font-size: 200%;
-		right: 10%;
 		position: absolute;
 		line-height: 300%;
+		right: 0;
 	}
 }
 
@@ -176,7 +170,7 @@ ul {
 	font-size: 20px;
 	li {
 		display: inline;
-		padding: 50px;
+		padding: 20px;
 	}
 }
 
