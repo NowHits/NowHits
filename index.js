@@ -57,6 +57,7 @@ app.get('/', (req, res) => {
 
   if (metrics.live.is_live == "false") {
     dj = "No one!";
+    metrics.now_playing.song.art = "https://cdn.discordapp.com/icons/607583026112888839/475dbb4dbee00098fd1476aaf91c0899.png?size=128";
   } else {
     dj = metrics.live.streamer_name;
   }
