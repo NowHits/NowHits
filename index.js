@@ -36,6 +36,7 @@ request(requestOptions, function metricFetch(error, response, body){
 app.get('/', (req, res) => {
   request(requestOptions, function metricFetch(error, response, body){
     metrics = body;
+    console.log("new");
     return metrics;
   });
   params = req.query
@@ -48,8 +49,8 @@ app.get('/', (req, res) => {
     return;
   }
 
-  if (metrics.live.is_live == "false") {
-    dj = "No one!";
+  if (metrics.live.is_live == false) {
+    dj = "NowHits";
     metrics.now_playing.song.art = "https://cdn.discordapp.com/icons/607583026112888839/475dbb4dbee00098fd1476aaf91c0899.png?size=128";
   } else {
     dj = metrics.live.streamer_name;
