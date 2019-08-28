@@ -53,6 +53,7 @@ app.get('/', (req, res) => {
     dj = "NowHits";
     metrics.now_playing.song.art = "https://cdn.discordapp.com/icons/607583026112888839/475dbb4dbee00098fd1476aaf91c0899.png?size=128";
   } else {
+    console.log(metrics.live.is_live);
     dj = metrics.live.streamer_name;
   }
 
