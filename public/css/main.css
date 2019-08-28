@@ -14,7 +14,7 @@ People Who Have Done A Bad:
 
 */
 body {
-  background-image: linear-gradient(to right, #43CEA2, #00B5B3, #0099BB, #007AB4, #185A9D);
+  background-image: linear-gradient(to right, #F12711, #F5AF19);
   font-family: "Josefin Sans", sans-serif;
   color: #444;
   margin: auto;
@@ -22,7 +22,7 @@ body {
 
 .rootplayer {
   margin: 0;
-  margin-left: 67%;
+  margin-left: 2%;
   margin-right: 10%;
   width: 30%;
   position: absolute;
@@ -33,12 +33,15 @@ body {
   .rootplayer .playerinfo {
     width: 60%;
     float: right;
-    border-width: 5px;
+    border-width: 2px;
     border-style: solid; }
     .rootplayer .playerinfo hr {
       border-style: solid;
-      border-width: 3px;
+      border-width: 0.5px;
       padding: 0; }
+
+.picture {
+  border-radius: 50%; }
 
 .advert {
   position: absolute;
@@ -47,7 +50,7 @@ body {
   box-shadow: 0 0 10px #ddd;
   width: 30%;
   margin: 0;
-  margin-left: 31%;
+  margin-left: 39%;
   margin-right: 10%;
   position: absolute;
   float: right; }
@@ -138,7 +141,7 @@ footer {
 
 .discord {
   height: 500px;
-  margin: 3px; }
+  margin-left: 75%; }
 
 ::-webkit-scrollbar {
   width: 10px; }

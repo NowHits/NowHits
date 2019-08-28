@@ -17,7 +17,7 @@ People Who Have Done A Bad:
 // Placeholders
 
 $main-font: 'Josefin Sans', sans-serif;
-$background-1: linear-gradient(to right, #43CEA2, #00B5B3, #0099BB, #007AB4, #185A9D); // Cyan.
+$background-1: linear-gradient(to right, #F12711, #F5AF19); // Orange.
 $background-2: linear-gradient(to right bottom, #845EC2, #D65DB1, #FF6F91, #FF9671, #F9F871); // Magenta.
 $background-3: linear-gradient(to right bottom, #FF5D5D, #DD5185, #A75799, #6C5A94, #2F4858); // Orange.
 $background-4: linear-gradient(to right bottom, #0069E8, #00AFEE, #00CDCA, #00E997, #48FF5F); // Blue.
@@ -34,7 +34,7 @@ body {
 
 .rootplayer {
 	margin: 0;
-	margin-left: 67%;
+	margin-left: 2%;
 	margin-right: 10%;
 	width: 30%;
 	position: absolute;
@@ -45,14 +45,18 @@ body {
 	.playerinfo {
 		width: 60%;
 		float: right;
-		border-width: 5px;
+		border-width: 2px;
 		border-style: solid;
 		hr {
 			border-style: solid;
-			border-width: 3px;
+			border-width: 0.5px;
 			padding: 0;
 		}
 	}
+}
+
+.picture {
+	border-radius: 50%;
 }
 
 .advert {
@@ -62,7 +66,7 @@ body {
 	box-shadow: 0 0 10px #ddd;
 	width: 30%;
 	margin: 0;
-	margin-left: 31%;
+	margin-left: 39%;
 	margin-right: 10%;
 	position: absolute;
 	float: right;
@@ -175,7 +179,7 @@ footer {
 
 .discord {
 	height: 500px;
-	margin: 3px;
+	margin-left: 75%;
 }
 
 
