@@ -21,14 +21,7 @@ app.engine('hbs', hbs( {
   partialsDir: __dirname + "/views/partials/"
 }));
 
-var config = JSON.parse(fs.readFileSync('./public/config.json'))
 var announcement = JSON.parse(fs.readFileSync('./public/announcement.json'))
-
-/*app.get('*', (req, res) => {
-  if (config.lockdown == true) {
-    res.render('emergency')
-  }
-});*/
 
 var requestOptions = {
   uri: 'http://radio.nowhits.uk/api/nowplaying/1',
