@@ -27,13 +27,15 @@ $background-lua: linear-gradient(to left bottom, #FF0000, #002983, #0C8300, #4D3
 body {
 	background-image: $background-1;
 	font-family: $main-font;
-	color: #444;
+	color: #fff;
 	margin: auto;
 	overflow-x: hidden;
+	user-select: none;
 }
 
 .rootplayer {
 	margin: 0;
+	color: #000;
 	margin-left: 2%;
 	margin-right: 10%;
 	width: 30%;
@@ -64,6 +66,7 @@ body {
 	background-color: rgba(255, 255, 255, 0.8);
 	border-radius: 20px;
 	box-shadow: 0 0 10px #ddd;
+	color: #000;
 	width: 30%;
 	margin: 0;
 	margin-left: 39%;
