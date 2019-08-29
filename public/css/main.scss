@@ -36,24 +36,27 @@ body {
 .rootplayer {
 	margin: 0;
 	color: #000;
-	margin-left: 2%;
+	margin-left: 1%;
 	margin-right: 10%;
-	width: 30%;
+	width: 70%;
+	height: 100px;
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0.8);
-	padding: 15px;
 	border-radius: 5px;
 	box-shadow: 0 0 10px #ddd;
+	overflow: visible;
+	img {
+   border:2px solid rgba(255, 255, 255, 0.8);
+	}
 	.playerinfo {
-		width: 60%;
+		width: 70%;
 		float: right;
-		border-width: 2px;
-		border-style: solid;
-		hr {
-			border-style: solid;
-			border-width: 0.5px;
-			padding: 0;
-		}
+		font-size: 120%;
+	}
+	.playercontrols {
+		left: 130px;
+		top: 30%;
+		position: absolute;
 	}
 }
 
@@ -73,6 +76,44 @@ body {
 	margin-right: 10%;
 	position: absolute;
 	float: right;
+	text-align: center;
+	.fab {
+		margin: 0;
+	}
+	a {
+		text-decoration: none;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #aaa;
+	}
+
+	a:link {
+	  text-decoration: none;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #aaa;
+	}
+
+	a:visited {
+		text-decoration: none;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #aaa;
+	}
+
+	a:hover {
+	  text-decoration: underline;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #555;
+	}
+
+	a:active {
+	  text-decoration: underline;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #333;
+	}
 }
 
 #pause {
@@ -87,7 +128,7 @@ body {
 	float: left;
 }
 
-.fas {
+.fas, .fab {
 	font-size: 40px;
 	margin-left: 50px;
 	margin-right: 50px;
@@ -96,6 +137,7 @@ body {
 
 #player {
 	visibility: hidden;
+	position: absolute;
 }
 
 #volume {
