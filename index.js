@@ -45,7 +45,6 @@ setInterval(updateClock, 5000);
 app.get('/', (req, res) => {
   request(requestOptions, function metricFetch(error, response, body){
     metrics = body;
-    console.log("new");
     return metrics;
   });
   params = req.query
