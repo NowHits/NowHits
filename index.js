@@ -33,20 +33,25 @@ request(requestOptions, function metricFetch(error, response, body){
   return metrics;
 });
 
-function updateClock() {
-  request(requestOptions, function metricFetch(error, response, body){
-    metrics = body;
-    return metrics;
-    console.log("updated. Metrics:", metrics);
-  });
-}
-setInterval(updateClock, 5000);
-
 app.get('/', (req, res) => {
+<<<<<<< HEAD
   request(requestOptions, function metricFetch(error, response, body){
     metrics = body;
     return metrics;
   });
+=======
+
+  function updateClock() {
+    request(requestOptions, function metricFetch(error, response, body){
+      metrics = body;
+      return metrics;
+    });
+    console.log(metrics.now_playing.song.text);
+  }
+
+  setInterval(updateClock, 1000);
+
+>>>>>>> 61e25a29b13732c4c6650e59c92fe785c75cae46
   params = req.query
   if (params.password != "luagay") {
     res.render('error', {
@@ -71,6 +76,18 @@ app.get('/', (req, res) => {
     songart: "https://cdn.discordapp.com/icons/607583026112888839/475dbb4dbee00098fd1476aaf91c0899.png?size=128",
     latestAnnouncement: announcement.latest,
     dj: dj
+  });
+});
+
+app.get('/timetable', (req, res) => {
+  res.render('timetable', {
+    title: "Timetable"
+  });
+});
+
+app.get('/request', (req, res) => {
+  res.render('request', {
+    title: "Request"
   });
 });
 
