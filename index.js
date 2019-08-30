@@ -72,6 +72,18 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/timetable', (req, res) => {
+  res.render('timetable', {
+    title: "Timetable"
+  });
+});
+
+app.get('/request', (req, res) => {
+  res.render('request', {
+    title: "Request"
+  });
+});
+
 app.get('*', (req, res) => {
   res.render('error', {
     title: "Error",
