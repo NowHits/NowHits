@@ -18,7 +18,7 @@ People Who Have Done A Bad:
 
 $main-font: 'Josefin Sans', sans-serif;
 $title-font: 'K2D', sans-serif;
-$background-1: linear-gradient(to right, #F12711, #F5AF19); // Orange.
+$background-1: linear-gradient(to right, #f12711, #f55600, #f67800, #f69400, #f5af19); // Main.
 $background-2: linear-gradient(to right bottom, #845EC2, #D65DB1, #FF6F91, #FF9671, #F9F871); // Magenta.
 $background-3: linear-gradient(to right bottom, #FF5D5D, #DD5185, #A75799, #6C5A94, #2F4858); // Orange.
 $background-4: linear-gradient(to right bottom, #0069E8, #00AFEE, #00CDCA, #00E997, #48FF5F); // Blue.
@@ -32,30 +32,80 @@ body {
 	margin: auto;
 	overflow-x: hidden;
 	user-select: none;
+	.fab {
+		margin: 0;
+	}
+	a {
+		text-decoration: none;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #aaa;
+	}
+
+	a:link {
+	  text-decoration: none;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #aaa;
+	}
+
+	a:visited {
+		text-decoration: none;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #aaa;
+	}
+
+	a:hover {
+	  text-decoration: underline;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #555;
+	}
+
+	a:active {
+	  text-decoration: underline;
+		transition-property: color;
+		transition-duration: 0.5s;
+		color: #333;
+	}
 }
 
 .rootplayer {
 	margin: 0;
+	top: 150px;
 	color: #000;
-	margin-left: 1%;
-	margin-right: 10%;
-	width: 70%;
-	height: 100px;
+	width: 100%;
+	height: auto;
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0.8);
-	border-radius: 5px;
 	box-shadow: 0 0 10px #ddd;
 	overflow: visible;
 	img {
    border:2px solid rgba(255, 255, 255, 0.8);
+	 position: absolute;
+	 bottom: 35px;
+	 margin-left: 20px;
+	 -webkit-animation-name:            rotate;
+   -webkit-animation-duration:        5s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: linear;
+	}
+	input {
+		position: absolute;
+		left: 150px;
+		width: 170px;
 	}
 	.playerinfo {
-		width: 70%;
-		float: right;
+		float: left;
+		margin-left: 600px;
+		white-space: pre-line;
+		line-height: 90%;
+		position: static;
 		font-size: 120%;
 	}
 	.playercontrols {
-		left: 130px;
+		left: 200px;
 		top: 30%;
 		position: absolute;
 	}
@@ -103,6 +153,7 @@ body {
 }
 
 .advert {
+	visibility: hidden;
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0.8);
 	border-radius: 20px;
@@ -259,11 +310,15 @@ footer {
 	margin: 0;
 	padding: 3px;
 	text-align: center;
+	position: fixed;
+  bottom: 0px;
+	width: 100%;
 }
 
 .discord {
 	height: 500px;
 	margin-left: 75%;
+	visibility: hidden;
 }
 
 
@@ -287,4 +342,13 @@ footer {
 // Handle on hover
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }

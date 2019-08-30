@@ -33,6 +33,15 @@ request(requestOptions, function metricFetch(error, response, body){
   return metrics;
 });
 
+function updateClock() {
+  request(requestOptions, function metricFetch(error, response, body){
+    metrics = body;
+    return metrics;
+    console.log("updated. Metrics:", metrics);
+  });
+}
+setInterval(updateClock, 5000);
+
 app.get('/', (req, res) => {
   request(requestOptions, function metricFetch(error, response, body){
     metrics = body;
@@ -51,17 +60,16 @@ app.get('/', (req, res) => {
 
   if (metrics.live.is_live == false) {
     dj = "NowHits";
-    metrics.now_playing.song.art = "https://cdn.discordapp.com/icons/607583026112888839/475dbb4dbee00098fd1476aaf91c0899.png?size=128";
+    //metrics.now_playing.song.art = "https://cdn.discordapp.com/icons/607583026112888839/475dbb4dbee00098fd1476aaf91c0899.png?size=128";
   } else {
     console.log(metrics.live.is_live);
     dj = metrics.live.streamer_name;
   }
-
   res.render('index', {
     title: "Home",
     currentListeners: metrics.listeners.current,
     songTitle: metrics.now_playing.song.text,
-    songart: metrics.now_playing.song.art,
+    songart: "https://cdn.discordapp.com/icons/607583026112888839/475dbb4dbee00098fd1476aaf91c0899.png?size=128",
     latestAnnouncement: announcement.latest,
     dj: dj
   });
