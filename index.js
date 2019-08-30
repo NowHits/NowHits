@@ -34,12 +34,10 @@ request(requestOptions, function metricFetch(error, response, body){
 });
 
 app.get('/', (req, res) => {
-<<<<<<< HEAD
   request(requestOptions, function metricFetch(error, response, body){
     metrics = body;
     return metrics;
   });
-=======
 
   function updateClock() {
     request(requestOptions, function metricFetch(error, response, body){
@@ -51,7 +49,6 @@ app.get('/', (req, res) => {
 
   setInterval(updateClock, 1000);
 
->>>>>>> 61e25a29b13732c4c6650e59c92fe785c75cae46
   params = req.query
   if (params.password != "luagay") {
     res.render('error', {
