@@ -49,14 +49,24 @@ body {
 
 .slider {
   -webkit-appearance: none;
-  height: 0px;
+  height: 1px;
   width: 65%;
+  background: transparent;
   background-color: red;
   outline: none;
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
   cursor: pointer; }
+
+.slider::-webkit-slider-runnable-track {
+  background: transparent;
+  background-color: red;
+  height: 1px; }
+
+.slider::-moz-range-track {
+  background: red;
+  height: 1px; }
 
 .slider:hover {
   opacity: 1; }
