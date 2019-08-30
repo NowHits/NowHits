@@ -33,21 +33,18 @@ request(requestOptions, function metricFetch(error, response, body){
   return metrics;
 });
 
-function updateClock() {
-  request(requestOptions, function metricFetch(error, response, body){
-    metrics = body;
-    return metrics;
-    console.log("updated. Metrics:", metrics);
-  });
-}
-setInterval(updateClock, 5000);
-
 app.get('/', (req, res) => {
-  request(requestOptions, function metricFetch(error, response, body){
-    metrics = body;
-    console.log("new");
-    return metrics;
-  });
+
+  function updateClock() {
+    request(requestOptions, function metricFetch(error, response, body){
+      metrics = body;
+      return metrics;
+    });
+    console.log(metrics.now_playing.song.text);
+  }
+
+  setInterval(updateClock, 1000);
+
   params = req.query
   if (params.password != "luagay") {
     res.render('error', {
