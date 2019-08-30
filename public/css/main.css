@@ -14,7 +14,7 @@ People Who Have Done A Bad:
 
 */
 body {
-  background-image: linear-gradient(to right, #f12711, #f55600, #f67800, #f69400, #f5af19);
+  background-image: linear-gradient(to left, #f12711, #f55600, #f67800, #f69400, #f5af19);
   font-family: "Josefin Sans", sans-serif;
   color: #fff;
   margin: auto;
