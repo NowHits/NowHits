@@ -43,38 +43,39 @@ app.get('/', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  request(requestOptions, function metricFetch(error, response, body){
-    metrics = body;
-    return metrics;
-  });
-
-  setInterval(updateClock, 1000);
-
-  params = req.query
-  if (params.password != "luagay") {
-    res.render('error', {
-      title: "Error",
-      code: "401",
-      desc: "Unauthorised"
+    request(requestOptions, function metricFetch(error, response, body){
+      metrics = body;
+      return metrics;
     });
-    return;
-  }
 
-  if (metrics.live.is_live == false) {
-    dj = "NowHits";
-    //metrics.now_playing.song.art = "https://cdn.discordapp.com/icons/607583026112888839/475dbb4dbee00098fd1476aaf91c0899.png?size=128";
-  } else {
-    console.log(metrics.live.is_live);
-    dj = metrics.live.streamer_name;
-  }
-  res.render('index', {
-    title: "Home",
-    currentListeners: metrics.listeners.current,
-    songTitle: metrics.now_playing.song.text,
-    songart: "https://cdn.discordapp.com/icons/607583026112888839/475dbb4dbee00098fd1476aaf91c0899.png?size=128",
-    latestAnnouncement: announcement.latest,
-    dj: dj
-  });
+    setInterval(updateClock, 1000);
+
+    params = req.query
+    if (params.password != "luagay") {
+      res.render('error', {
+        title: "Error",
+        code: "401",
+        desc: "Unauthorised"
+      });
+      return;
+    }
+
+    if (metrics.live.is_live == false) {
+      dj = "NowHits";
+      //metrics.now_playing.song.art = "https://cdn.discordapp.com/icons/607583026112888839/475dbb4dbee00098fd1476aaf91c0899.png?size=128";
+    } else {
+      console.log(metrics.live.is_live);
+      dj = metrics.live.streamer_name;
+    }
+
+    res.render('index', {
+      title: "Home",
+      currentListeners: metrics.listeners.current,
+      songTitle: metrics.now_playing.song.text,
+      songart: "https://cdn.discordapp.com/icons/607583026112888839/475dbb4dbee00098fd1476aaf91c0899.png?size=128",
+      latestAnnouncement: announcement.latest,
+      dj: dj
+    });
 });
 
 app.get('/timetable', (req, res) => {
