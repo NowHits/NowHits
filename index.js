@@ -33,19 +33,27 @@ request(requestOptions, function metricFetch(error, response, body){
   return metrics;
 });
 
+<<<<<<< HEAD
+app.get('/', (req, res) => {
+=======
+function updateClock() {
+>>>>>>> 61c3bcc237184179147b4acc96d9a34eefae3a0f
+  request(requestOptions, function metricFetch(error, response, body){
+    metrics = body;
+    return metrics;
+  });
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 61c3bcc237184179147b4acc96d9a34eefae3a0f
+
+updateClock();
+
 app.get('/', (req, res) => {
   request(requestOptions, function metricFetch(error, response, body){
     metrics = body;
     return metrics;
   });
-
-  function updateClock() {
-    request(requestOptions, function metricFetch(error, response, body){
-      metrics = body;
-      return metrics;
-    });
-    console.log(metrics.now_playing.song.text);
-  }
 
   setInterval(updateClock, 1000);
 
