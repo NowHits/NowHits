@@ -33,25 +33,23 @@ request(requestOptions, function metricFetch(error, response, body){
   return metrics;
 });
 
-app.get('/', (req, res) => {
-<<<<<<< HEAD
+function updateClock() {
   request(requestOptions, function metricFetch(error, response, body){
     metrics = body;
     return metrics;
   });
-=======
+}
 
-  function updateClock() {
-    request(requestOptions, function metricFetch(error, response, body){
-      metrics = body;
-      return metrics;
-    });
-    console.log(metrics.now_playing.song.text);
-  }
+updateClock();
+
+app.get('/', (req, res) => {
+  request(requestOptions, function metricFetch(error, response, body){
+    metrics = body;
+    return metrics;
+  });
 
   setInterval(updateClock, 1000);
 
->>>>>>> 61e25a29b13732c4c6650e59c92fe785c75cae46
   params = req.query
   if (params.password != "luagay") {
     res.render('error', {
