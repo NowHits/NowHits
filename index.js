@@ -34,14 +34,13 @@ request(requestOptions, function metricFetch(error, response, body){
 });
 
 app.get('/', (req, res) => {
-function updateClock() {
-  request(requestOptions, function metricFetch(error, response, body){
-    metrics = body;
-    return metrics;
-  });
-}
-
-updateClock();
+  function updateClock() {
+    request(requestOptions, function metricFetch(error, response, body){
+      metrics = body;
+      return metrics;
+    });
+  };
+});
 
 app.get('/', (req, res) => {
   request(requestOptions, function metricFetch(error, response, body){
