@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
       });
     }
 
-    setInterval(updateClock, 1000);
+    setInterval(updateClock, 5000);
 
     params = req.query
     if (params.password != "luagay") {
