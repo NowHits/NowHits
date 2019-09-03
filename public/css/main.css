@@ -22,10 +22,11 @@ People Who Have Done A Bad:
   Kai @ 8/17/19 ~ Breaking the whole damn website
 	Ethan @ 8/18/19 ~ Leaking the IP
 	Tony @ 8/31/19 ~ forgetting to commit and push, breaking something
+	Thomas @ 8/31/19 ~ Breaking the whole site
 
 */
 body {
-  background-image: linear-gradient(to left, #f12711, #f55600, #f67800, #f69400, #f5af19);
+  background-image: linear-gradient(to right bottom, #3754D6, #6170F8, #6170F8, #AAADFF, #AAADFF);
   height: 100%;
   width: 100%;
   font-family: "Josefin Sans", sans-serif;
@@ -182,9 +183,6 @@ body {
   display: none; }
 
 .brand {
-  font-size: 48px;
-  margin-top: -40px;
-  margin-bottom: -40px;
   text-align: center;
   float: left; }
 
@@ -273,7 +271,8 @@ footer {
   height: 500px;
   width: 500px;
   margin-top: 220px;
-  float: right; }
+  float: right;
+  display: none; }
 
 .countdown {
   margin-top: 100px;

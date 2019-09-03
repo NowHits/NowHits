@@ -95,5 +95,4 @@ app.get('*', (req, res) => {
     desc: "Not Found"
   });
 });
-
 app.listen(port, () => console.log(`Listening on port ${port}!`.cyan));
